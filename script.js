@@ -43,3 +43,24 @@ function copyColorHex(colorHex) {
   // Show a message or perform any other action to indicate successful copying
   console.log("Color HEX code copied: " + colorHex);
 }
+
+function copyAllHexCodes() {
+  const colorBoxes = document.querySelectorAll(".color-box");
+  let allHexCodes = "";
+
+  colorBoxes.forEach(colorBox => {
+    const colorHex = colorBox.getAttribute("data-color");
+    allHexCodes += colorHex + "\n";
+  });
+
+  // Create a temporary textarea element to copy all HEX codes to the clipboard
+  const textarea = document.createElement('textarea');
+  textarea.value = allHexCodes;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+
+  // Show a message or perform any other action to indicate successful copying
+  console.log("All HEX codes copied:\n" + allHexCodes);
+}
