@@ -32,3 +32,13 @@ body {
   background-color:black;
   margin-top:15px;
 }
+
+#copy-all-btn{
+  font-family:'Source Code Pro';
+  width:9rem;
+  height:4rem;
+  border-radius:12px;
+  color:white;
+  background-color:black;
+  margin-top:15px;
+}
